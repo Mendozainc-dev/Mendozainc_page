@@ -1,0 +1,174 @@
+---
+import '../styles/fonts.css'
+---
+
+<footer>
+    <div class="icons_container"> <!-- Contenedor de los iconos de la aplicacion  -->
+        <div class="text">
+            <p><h1>Mis redes sociales</h1></p>
+        </div>
+        <div class="social_icons">
+            <a href=""><img src="/src/assets/icons8-facebook.svg" alt=""></a>
+            <a href=""><img src="/src/assets/icons8-github-100.png" alt=""></a>
+            <a href=""><img src="/src/assets/icons8-hilos-64.png" alt=""></a>
+            <a href=""><img src="/src/assets/icons8-instagram.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="contact_container"> <!-- Contenedor del formulario -->
+        <form action="" method="post">
+            <div class="text"> <!-- La class de text se repite para usar el mismo formato de los titulos y tener consistencia de diseno -->
+                <p><h1>Deja tu contacto</h1></p>
+            </div>
+            <div class="contact">
+
+                <label for="">Nombre Completo</label>
+                <input type="text" placeholder="Ejemplo: Salvador Mendoza">
+                
+                <label for="">Tu numero de telefono</label>
+                <input type="tel" placeholder="Requiere ser mexicano, de no ser asi especificar en notas" maxlength="15">
+                
+                <label for="">Correo</label>
+                <input type="email" placeholder="Ejemplo: correo@outlook.com">
+
+                <label for="">Razon</label>
+                <input type="text" placeholder="El porque del mensaje">
+
+                <label for="">Notas</label>
+                <input type="text" placeholder="Notas del mensaje"> 
+
+                <button type="submit">Enviar</button>
+
+            </div>
+        </form>
+    </div>
+    <div class="text_movil">
+        <p><h1 class="text">Pagina creada por salvador mendoza munoz</h1></p>
+    </div>
+</footer>
+
+
+<style>
+    /* ================================================== */
+    /* Display general del footer */
+
+    footer{
+        display: flex;
+        background-color: #1a1a1a;
+        justify-content:flex-start;
+    }
+    /* ================================================== */
+    /* Diseno del contenedor de los iconos*/
+
+    .icons_container{
+        display: grid;
+        justify-content: center;
+        flex-basis: 15%;
+    }
+
+    .text{
+        display: flex;
+        padding: 10px;
+        justify-content: center;    
+        text-align: center;
+    }
+    .text h1{
+        font-size:xx-large;
+        font-family: 'Alex-Brush', sans-serif;
+        color: #ffcc00;
+        text-decoration:underline double;
+    } 
+
+    .social_icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .social_icons img{
+        width: 50px;
+    }
+
+    .social_icons img:hover{
+        transform: scale(1.1);
+        box-shadow: ;
+        filter: drop-shadow(0px 0px 6px); 
+        transition: all .5s;
+    }
+
+    .social_icons img:active{
+        transform: scale(.8);
+    }
+    /* ================================================== */
+    /* Diseno del contenedor de el formulario */
+
+
+    label{
+        color: #ffcc00;
+        font-family: 'Marvel', sans-serif;
+        font-size: x-large;
+    }
+    
+    input{
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        outline: none;
+        width: max-content;
+        padding: 5px;
+    }
+    input:focus{
+        box-shadow: 0px 0px 3px #ffcc00;
+    }
+
+    .contact{
+        display: grid;
+        justify-content: center;
+        padding: 20px;
+        
+    }
+
+    button{
+        background-color: white;
+        font-family: 'Alex-Brush', sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #ffcc00;
+    }
+    button:active{
+        background-color: black;
+        color: #ffcc00;
+        }
+
+    /* ================================================== */
+    /* Integracion de un texto que solo sera para movil */
+    
+    .text_movil{
+        display: none;
+    }
+
+    /* ================================================== */
+
+    @media(max-width: 700px){
+
+       footer{
+        display: grid;
+        justify-content: center;
+       }
+
+       label{
+        justify-self: center;
+       }
+
+       .text_movil{
+        display: block;
+        font-family: "Marvel", sans-serif;
+        color: white;
+       }
+       
+    }
+</style>

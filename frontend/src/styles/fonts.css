@@ -5,3 +5,19 @@
     font-style: normal;
     font-display: swap; 
 }
+
+@font-face {
+    font-family: "Alex-Brush";
+    src: url('/fonts/Alex_Brush/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: "Marvel";
+    src: url('/fonts/Marvel/Marvel-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
