@@ -1,0 +1,71 @@
+---
+/* Aqui va todo lo relacionado a js */
+import '../styles/fonts.css'
+import Logo from '/Logo_Mendozainc.svg?url'
+---
+
+<footer>
+    <div class="image_container">
+        <img src={Logo} alt="">
+    </div>
+    <nav class="links_container">
+        <a href="/"><button>INICIO</button></a>
+        <a href="/blog"><button>BLOG</button></a>
+        <a href="/proyectos"><button>PROYECTOS</button></a>
+        <a href="sobreMi"><button>SOBRE MI</button></a>
+    </nav>
+</footer>
+
+<style>
+    .image_container{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    .links_container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #000000;
+    }
+
+    .links_container button{
+        font-family: 'Roboto', sans-serif;
+        background-color: #1a1a1a ;
+        color: white;
+        font-size: large;
+        border: hidden;
+        padding: 10px;
+    }
+
+    .links_container button:hover{
+        background-color: #272727;
+        color: #ffcc00;
+        font-family: 'Roboto', sans-serif;
+        transition: all .5s;
+    }
+
+    @media(max-width: 700px){
+
+        img{
+            width: 100px;
+        }
+        
+        .links_container{
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .links_container button{
+            font-size: medium;
+            padding: auto;
+        }
+    }
+    
+</style>
